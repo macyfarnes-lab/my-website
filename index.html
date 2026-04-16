@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="glass-card">
+
+        <h1>Macy Farnes</h1>
+        <p>Business Student | Brigham Young University</p>
+
+        <hr style="width: 50%; margin: 20px auto; border-color: rgba(255,255,255,0.3);">
+
+        <p class="mt-3">
+            I’m passionate about working with people, building meaningful experiences,
+            and exploring new places. This site highlights my professional experience,
+            a custom travel page, and an interactive web application I built.
+        </p>
+
+        <div class="mt-4">
+            <a href="html/resume.html" class="btn btn-light btn-custom">Resume</a>
+            <a href="html/scratch.html" class="btn btn-success btn-custom">Travel Page</a>
+            <a href="html/app.html" class="btn btn-warning btn-custom">Game</a>
+            <a href="html/tableau.html" class="btn btn-info btn-custom">Tableau</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ISLAND -->
+<div class="island-container">  
+    <div class="island-label">Click for a fun fact about me</div>
+    <div class="island" onclick="showFact()">🌴</div>
+</div>
+
+<div id="factBubble" class="fact-bubble"></div>
+
+<script>
+const facts = [
+    "I love traveling to tropical places 🌴",
+    "I have experience in sales and customer service",
+    "I enjoy working with kids as a nanny",
+    "One of my favorite places is Saipan",
+    "I’m currently studying business at BYU"
+];
+
+function showFact() {
+    const bubble = document.getElementById("factBubble");
+    const randomIndex = Math.floor(Math.random() * facts.length);
+
+    bubble.innerHTML = facts[randomIndex];
+    bubble.style.display = "block";
+
+    setTimeout(() => {
+        bubble.style.display = "none";
+    }, 4000);
+}
+</script>
+
+</body>
+</html>
