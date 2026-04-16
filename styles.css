@@ -1,0 +1,205 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HERO BACKGROUND
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 128, 128, 0.6)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 60px 0;
+}
+
+/* =========================
+   GLASS CARD (MAIN STYLE)
+========================= */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+    padding: 40px;
+
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+    color: white;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Resume uses slightly more solid card */
+.resume-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    border-bottom: 2px solid #ddd;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.glass-card p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-custom {
+    margin: 8px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn-light {
+    color: #003366;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   SECTIONS (SPACING)
+========================= */
+
+.section {
+    margin-top: 30px;
+}
+
+/* =========================
+   ISLAND FEATURE
+========================= */
+
+.island-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.island {
+    font-size: 40px;
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+}
+
+.island:hover {
+    transform: scale(1.2);
+}
+
+/* label */
+.island-label {
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #003366;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    white-space: nowrap;
+}
+
+/* speech bubble */
+.fact-bubble {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+
+    background: white;
+    color: #003366;
+
+    padding: 12px 16px;
+    border-radius: 15px;
+    max-width: 250px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+    display: none;
+    font-size: 14px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
